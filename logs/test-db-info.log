@@ -1,0 +1,1646 @@
+2018-04-18 09:03:09.419 [INFO ] [vert.x-eventloop-thread-0] obj.SqlReadConnection [55] - initializing connection
+2018-04-18 09:03:10.019 [INFO ] [vert.x-eventloop-thread-0] obj.SqlWriteConnection [55] - initializing connection
+2018-04-18 09:03:35.141 [INFO ] [vert.x-worker-thread-0] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:03:35.362 [INFO ] [vert.x-worker-thread-0] org.jooq.Constants [341] - 
+                                      
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@  @@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@        @@  @  @  @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@  @@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  Thank you for using jOOQ 3.9.1
+                                      
+2018-04-18 09:03:35.822 [INFO ] [vert.x-worker-thread-0] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:03:36.359 [INFO ] [vert.x-worker-thread-1] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:03:37.359 [INFO ] [vert.x-worker-thread-2] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:03:38.362 [INFO ] [vert.x-worker-thread-3] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:03:39.353 [INFO ] [vert.x-worker-thread-4] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:03:40.362 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:03:41.360 [INFO ] [vert.x-worker-thread-6] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:03:42.360 [INFO ] [vert.x-worker-thread-7] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:03:43.358 [INFO ] [vert.x-worker-thread-8] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:03:44.361 [INFO ] [vert.x-worker-thread-9] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:03:45.361 [INFO ] [vert.x-worker-thread-10] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:03:46.361 [INFO ] [vert.x-worker-thread-11] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:03:47.362 [INFO ] [vert.x-worker-thread-12] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:03:48.353 [INFO ] [vert.x-worker-thread-13] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:03:49.363 [INFO ] [vert.x-worker-thread-14] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:03:50.361 [INFO ] [vert.x-worker-thread-15] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:03:51.361 [INFO ] [vert.x-worker-thread-16] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:03:52.362 [INFO ] [vert.x-worker-thread-17] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:03:52.554 [ERROR] [vert.x-worker-thread-17] database.mysql.repository.TestDataImpl [215] - failed to save record: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Communications link failure
+
+The last packet successfully received from the server was 13 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 13 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.
+org.springframework.dao.RecoverableDataAccessException: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Communications link failure
+
+The last packet successfully received from the server was 13 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 13 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.
+	at org.jooq_3.9.1.MYSQL.debug(Unknown Source) ~[?:?]
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:98) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:364) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:210) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:90) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:63) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:271) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.lambda$new$0(TaskQueue.java:60) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 13 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_161]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_161]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_161]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_161]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:981) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3465) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2957) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3375) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+2018-04-18 09:03:53.363 [INFO ] [vert.x-worker-thread-18] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:03:53.382 [ERROR] [vert.x-worker-thread-18] database.mysql.repository.TestDataImpl [215] - failed to save record: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Communications link failure
+
+The last packet successfully received from the server was 9 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 9 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.
+org.springframework.dao.RecoverableDataAccessException: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Communications link failure
+
+The last packet successfully received from the server was 9 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 9 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.
+	at org.jooq_3.9.1.MYSQL.debug(Unknown Source) ~[?:?]
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:98) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:364) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:210) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:90) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:63) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:271) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.lambda$new$0(TaskQueue.java:60) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 9 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_161]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_161]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_161]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_161]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:981) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3465) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2957) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3375) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+2018-04-18 09:03:54.361 [INFO ] [vert.x-worker-thread-19] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:04.367 [ERROR] [vert.x-worker-thread-19] database.mysql.repository.TestDataImpl [215] - failed to save record: Cannot translate a null SQLException
+java.lang.IllegalArgumentException: Cannot translate a null SQLException
+	at org.springframework.util.Assert.notNull(Assert.java:112) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:65) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:359) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:210) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:90) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:63) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:271) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.lambda$new$0(TaskQueue.java:60) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+2018-04-18 09:04:04.369 [INFO ] [vert.x-worker-thread-19] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:14.369 [ERROR] [vert.x-worker-thread-19] database.mysql.repository.TestDataImpl [215] - failed to save record: Cannot translate a null SQLException
+java.lang.IllegalArgumentException: Cannot translate a null SQLException
+	at org.springframework.util.Assert.notNull(Assert.java:112) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:65) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:359) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:210) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:90) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:63) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:271) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.lambda$new$0(TaskQueue.java:60) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+2018-04-18 09:04:14.372 [INFO ] [vert.x-worker-thread-19] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:24.375 [INFO ] [vert.x-worker-thread-19] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:24.411 [INFO ] [vert.x-worker-thread-19] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:24.464 [INFO ] [vert.x-worker-thread-19] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:24.532 [INFO ] [vert.x-worker-thread-19] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:24.568 [INFO ] [vert.x-worker-thread-19] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:24.609 [INFO ] [vert.x-worker-thread-19] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:24.653 [INFO ] [vert.x-worker-thread-19] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:24.687 [INFO ] [vert.x-worker-thread-19] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:24.724 [INFO ] [vert.x-worker-thread-19] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:24.766 [INFO ] [vert.x-worker-thread-19] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:24.811 [INFO ] [vert.x-worker-thread-19] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:24.849 [INFO ] [vert.x-worker-thread-19] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:24.890 [INFO ] [vert.x-worker-thread-19] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:24.935 [INFO ] [vert.x-worker-thread-19] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:24.980 [INFO ] [vert.x-worker-thread-19] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:25.024 [INFO ] [vert.x-worker-thread-19] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:25.068 [INFO ] [vert.x-worker-thread-19] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:25.115 [INFO ] [vert.x-worker-thread-19] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:25.202 [INFO ] [vert.x-worker-thread-19] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:25.269 [INFO ] [vert.x-worker-thread-19] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:25.313 [INFO ] [vert.x-worker-thread-19] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:25.362 [INFO ] [vert.x-worker-thread-19] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:25.405 [INFO ] [vert.x-worker-thread-19] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:25.451 [INFO ] [vert.x-worker-thread-19] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:25.507 [INFO ] [vert.x-worker-thread-19] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:25.549 [INFO ] [vert.x-worker-thread-19] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:25.595 [INFO ] [vert.x-worker-thread-19] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:25.639 [INFO ] [vert.x-worker-thread-19] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:25.684 [INFO ] [vert.x-worker-thread-19] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:26.357 [INFO ] [vert.x-worker-thread-0] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:27.429 [INFO ] [vert.x-worker-thread-1] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:28.358 [INFO ] [vert.x-worker-thread-2] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:29.357 [INFO ] [vert.x-worker-thread-3] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:30.354 [INFO ] [vert.x-worker-thread-4] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:31.353 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:32.358 [INFO ] [vert.x-worker-thread-6] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:33.356 [INFO ] [vert.x-worker-thread-7] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:34.358 [INFO ] [vert.x-worker-thread-8] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:35.357 [INFO ] [vert.x-worker-thread-9] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:36.352 [INFO ] [vert.x-worker-thread-10] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:04:37.355 [INFO ] [vert.x-worker-thread-11] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:14:34.096 [INFO ] [vert.x-eventloop-thread-0] obj.SqlReadConnection [55] - initializing connection
+2018-04-18 09:14:34.380 [INFO ] [vert.x-eventloop-thread-0] obj.SqlWriteConnection [55] - initializing connection
+2018-04-18 09:15:38.217 [INFO ] [vert.x-worker-thread-0] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:15:38.425 [INFO ] [vert.x-worker-thread-0] org.jooq.Constants [341] - 
+                                      
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@  @@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@        @@  @  @  @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@  @@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  Thank you for using jOOQ 3.9.1
+                                      
+2018-04-18 09:15:38.658 [INFO ] [vert.x-worker-thread-1] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:15:39.662 [INFO ] [vert.x-worker-thread-2] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:15:40.666 [INFO ] [vert.x-worker-thread-3] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:15:41.662 [INFO ] [vert.x-worker-thread-4] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:15:42.666 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:15:43.662 [INFO ] [vert.x-worker-thread-6] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:15:44.663 [INFO ] [vert.x-worker-thread-7] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:15:45.663 [INFO ] [vert.x-worker-thread-8] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:15:46.665 [INFO ] [vert.x-worker-thread-9] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:15:47.665 [INFO ] [vert.x-worker-thread-10] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:15:48.664 [INFO ] [vert.x-worker-thread-11] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:15:49.665 [INFO ] [vert.x-worker-thread-12] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:15:50.665 [INFO ] [vert.x-worker-thread-13] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:15:51.665 [INFO ] [vert.x-worker-thread-14] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:15:51.848 [ERROR] [vert.x-worker-thread-14] database.mysql.repository.TestDataImpl [215] - failed to save record: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Server shutdown in progress; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Server shutdown in progress
+org.springframework.dao.DataAccessResourceFailureException: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Server shutdown in progress; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Server shutdown in progress
+	at org.jooq_3.9.1.MYSQL.debug(Unknown Source) ~[?:?]
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:79) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:364) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:210) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:90) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:63) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:271) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.lambda$new$0(TaskQueue.java:60) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Server shutdown in progress
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_161]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_161]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_161]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_161]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:917) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ServerPreparedStatement.serverExecute(ServerPreparedStatement.java:1274) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ServerPreparedStatement.executeInternal(ServerPreparedStatement.java:780) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+2018-04-18 09:15:52.672 [INFO ] [vert.x-worker-thread-15] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:15:52.690 [ERROR] [vert.x-worker-thread-15] database.mysql.repository.TestDataImpl [215] - failed to save record: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Communications link failure
+
+The last packet successfully received from the server was 8 milliseconds ago.  The last packet sent successfully to the server was 0 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 8 milliseconds ago.  The last packet sent successfully to the server was 0 milliseconds ago.
+org.springframework.dao.RecoverableDataAccessException: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Communications link failure
+
+The last packet successfully received from the server was 8 milliseconds ago.  The last packet sent successfully to the server was 0 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 8 milliseconds ago.  The last packet sent successfully to the server was 0 milliseconds ago.
+	at org.jooq_3.9.1.MYSQL.debug(Unknown Source) ~[?:?]
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:98) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:364) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:210) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:90) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:63) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:271) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.lambda$new$0(TaskQueue.java:60) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 8 milliseconds ago.  The last packet sent successfully to the server was 0 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_161]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_161]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_161]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_161]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:981) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3465) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2957) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3375) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+2018-04-18 09:15:53.664 [INFO ] [vert.x-worker-thread-16] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:16:03.669 [ERROR] [vert.x-worker-thread-16] database.mysql.repository.TestDataImpl [215] - failed to save record: Cannot translate a null SQLException
+java.lang.IllegalArgumentException: Cannot translate a null SQLException
+	at org.springframework.util.Assert.notNull(Assert.java:112) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:65) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:359) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:210) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:90) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:63) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:271) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.lambda$new$0(TaskQueue.java:60) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+2018-04-18 09:16:03.676 [INFO ] [vert.x-worker-thread-16] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:16:13.679 [ERROR] [vert.x-worker-thread-16] database.mysql.repository.TestDataImpl [215] - failed to save record: Cannot translate a null SQLException
+java.lang.IllegalArgumentException: Cannot translate a null SQLException
+	at org.springframework.util.Assert.notNull(Assert.java:112) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:65) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:359) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:210) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:90) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:63) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:271) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.lambda$new$0(TaskQueue.java:60) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+2018-04-18 09:16:13.684 [INFO ] [vert.x-worker-thread-16] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:16:14.076 [INFO ] [vert.x-worker-thread-16] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:16:14.109 [INFO ] [vert.x-worker-thread-16] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:16:14.143 [INFO ] [vert.x-worker-thread-16] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:16:14.209 [INFO ] [vert.x-worker-thread-16] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:16:14.278 [INFO ] [vert.x-worker-thread-16] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:16:14.326 [INFO ] [vert.x-worker-thread-16] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:16:14.368 [INFO ] [vert.x-worker-thread-16] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:16:14.414 [INFO ] [vert.x-worker-thread-16] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:16:14.456 [INFO ] [vert.x-worker-thread-16] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:16:14.503 [INFO ] [vert.x-worker-thread-16] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:16:14.545 [INFO ] [vert.x-worker-thread-16] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:16:14.592 [INFO ] [vert.x-worker-thread-16] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:16:14.637 [INFO ] [vert.x-worker-thread-16] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:16:14.679 [INFO ] [vert.x-worker-thread-16] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:16:14.724 [INFO ] [vert.x-worker-thread-16] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:16:14.776 [INFO ] [vert.x-worker-thread-16] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:16:14.827 [INFO ] [vert.x-worker-thread-16] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:16:14.869 [INFO ] [vert.x-worker-thread-16] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:16:14.913 [INFO ] [vert.x-worker-thread-16] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:16:15.664 [INFO ] [vert.x-worker-thread-17] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:16:16.663 [INFO ] [vert.x-worker-thread-18] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:16:17.663 [INFO ] [vert.x-worker-thread-19] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:16:18.661 [INFO ] [vert.x-worker-thread-0] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:16:19.663 [INFO ] [vert.x-worker-thread-1] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:16:20.661 [INFO ] [vert.x-worker-thread-2] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:16:21.661 [INFO ] [vert.x-worker-thread-3] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:16:22.701 [INFO ] [vert.x-worker-thread-4] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:16:23.660 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:16:24.659 [INFO ] [vert.x-worker-thread-6] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:16:25.654 [INFO ] [vert.x-worker-thread-7] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:16:26.660 [INFO ] [vert.x-worker-thread-8] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:16:27.659 [INFO ] [vert.x-worker-thread-9] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:16:28.661 [INFO ] [vert.x-worker-thread-10] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:16:29.659 [INFO ] [vert.x-worker-thread-11] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:16:30.655 [INFO ] [vert.x-worker-thread-12] app.ServiceImpl [89] - Save data into database
+2018-04-18 09:16:31.655 [INFO ] [vert.x-worker-thread-13] app.ServiceImpl [89] - Save data into database
+2018-04-18 10:06:57.210 [INFO ] [vert.x-eventloop-thread-0] obj.SqlReadConnection [55] - initializing connection
+2018-04-18 10:08:29.346 [INFO ] [vert.x-eventloop-thread-0] obj.SqlReadConnection [55] - initializing connection
+2018-04-18 10:14:46.542 [INFO ] [vert.x-eventloop-thread-0] obj.SqlReadConnection [55] - initializing connection
+2018-04-18 10:14:47.243 [INFO ] [vert.x-eventloop-thread-0] obj.SqlWriteConnection [55] - initializing connection
+2018-04-18 10:44:25.538 [INFO ] [vert.x-eventloop-thread-0] obj.SqlReadConnection [55] - initializing connection
+2018-04-18 10:44:25.971 [INFO ] [vert.x-eventloop-thread-0] obj.SqlWriteConnection [55] - initializing connection
+2018-04-18 10:44:26.003 [INFO ] [vert.x-eventloop-thread-0] database.redis.RedisAdapter [33] - Install redis...
+2018-04-18 10:44:26.450 [ERROR] [vert.x-eventloop-thread-0] database.redis.RedisAdapter [53] - Connected failed
+2018-04-18 10:44:52.108 [INFO ] [vert.x-eventloop-thread-0] obj.SqlReadConnection [55] - initializing connection
+2018-04-18 10:44:52.351 [INFO ] [vert.x-eventloop-thread-0] obj.SqlWriteConnection [55] - initializing connection
+2018-04-18 10:45:43.853 [INFO ] [vert.x-worker-thread-0] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:45:44.639 [INFO ] [vert.x-worker-thread-0] org.jooq.Constants [341] - 
+                                      
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@  @@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@        @@  @  @  @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@  @@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  Thank you for using jOOQ 3.9.1
+                                      
+2018-04-18 10:45:45.202 [INFO ] [vert.x-worker-thread-0] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:45:45.324 [INFO ] [vert.x-worker-thread-0] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:45:45.601 [INFO ] [vert.x-worker-thread-0] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:45:46.241 [INFO ] [vert.x-worker-thread-1] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:45:47.240 [INFO ] [vert.x-worker-thread-2] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:45:48.251 [INFO ] [vert.x-worker-thread-3] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:45:49.249 [INFO ] [vert.x-worker-thread-4] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:45:50.250 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:45:51.248 [INFO ] [vert.x-worker-thread-6] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:45:52.252 [INFO ] [vert.x-worker-thread-7] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:45:53.282 [INFO ] [vert.x-worker-thread-8] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:45:54.250 [INFO ] [vert.x-worker-thread-9] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:45:55.248 [INFO ] [vert.x-worker-thread-10] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:45:56.249 [INFO ] [vert.x-worker-thread-11] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:45:57.249 [INFO ] [vert.x-worker-thread-12] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:45:58.247 [INFO ] [vert.x-worker-thread-13] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:45:59.247 [INFO ] [vert.x-worker-thread-14] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:00.249 [INFO ] [vert.x-worker-thread-15] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:01.249 [INFO ] [vert.x-worker-thread-16] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:02.249 [INFO ] [vert.x-worker-thread-17] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:03.283 [INFO ] [vert.x-worker-thread-18] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:04.247 [INFO ] [vert.x-worker-thread-19] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:05.248 [INFO ] [vert.x-worker-thread-0] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:06.247 [INFO ] [vert.x-worker-thread-1] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:07.247 [INFO ] [vert.x-worker-thread-2] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:08.246 [INFO ] [vert.x-worker-thread-3] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:08.617 [ERROR] [vert.x-worker-thread-3] database.mysql.repository.TestDataImpl [221] - failed to save record: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Communications link failure
+
+The last packet successfully received from the server was 3 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 3 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.
+org.springframework.dao.RecoverableDataAccessException: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Communications link failure
+
+The last packet successfully received from the server was 3 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 3 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.
+	at org.jooq_3.9.1.MYSQL.debug(Unknown Source) ~[?:?]
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:98) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:364) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:216) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:95) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:68) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:278) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.run(TaskQueue.java:80) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 3 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_161]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_161]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_161]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_161]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:981) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3465) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2957) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3375) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+2018-04-18 10:46:09.241 [INFO ] [vert.x-worker-thread-4] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:09.244 [ERROR] [vert.x-worker-thread-4] database.mysql.repository.TestDataImpl [221] - failed to save record: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Could not retrieve transation read-only status server; nested exception is java.sql.SQLException: Could not retrieve transation read-only status server
+org.springframework.dao.TransientDataAccessResourceException: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Could not retrieve transation read-only status server; nested exception is java.sql.SQLException: Could not retrieve transation read-only status server
+	at org.jooq_3.9.1.MYSQL.debug(Unknown Source) ~[?:?]
+	at org.springframework.jdbc.support.SQLStateSQLExceptionTranslator.doTranslate(SQLStateSQLExceptionTranslator.java:108) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:364) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:216) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:95) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:68) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:278) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.run(TaskQueue.java:80) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+Caused by: java.sql.SQLException: Could not retrieve transation read-only status server
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:957) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:896) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:885) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:877) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:873) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.isReadOnly(ConnectionImpl.java:3629) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.isReadOnly(ConnectionImpl.java:3598) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.checkReadOnlySafeStatement(PreparedStatement.java:1117) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1137) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 1 milliseconds ago.  The last packet sent successfully to the server was 0 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_161]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_161]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_161]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_161]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:981) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3465) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2547) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2505) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.StatementImpl.executeQuery(StatementImpl.java:1370) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.isReadOnly(ConnectionImpl.java:3623) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.isReadOnly(ConnectionImpl.java:3598) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.checkReadOnlySafeStatement(PreparedStatement.java:1117) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1137) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2957) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3375) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2547) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2505) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.StatementImpl.executeQuery(StatementImpl.java:1370) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.isReadOnly(ConnectionImpl.java:3623) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.isReadOnly(ConnectionImpl.java:3598) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.checkReadOnlySafeStatement(PreparedStatement.java:1117) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1137) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+2018-04-18 10:46:10.247 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:20.252 [ERROR] [vert.x-worker-thread-5] database.mysql.repository.TestDataImpl [221] - failed to save record: Cannot translate a null SQLException
+java.lang.IllegalArgumentException: Cannot translate a null SQLException
+	at org.springframework.util.Assert.notNull(Assert.java:112) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:65) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:359) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:216) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:95) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:68) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:278) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.run(TaskQueue.java:80) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+2018-04-18 10:46:20.261 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:30.265 [ERROR] [vert.x-worker-thread-5] database.mysql.repository.TestDataImpl [221] - failed to save record: Cannot translate a null SQLException
+java.lang.IllegalArgumentException: Cannot translate a null SQLException
+	at org.springframework.util.Assert.notNull(Assert.java:112) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:65) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:359) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:216) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:95) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:68) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:278) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.run(TaskQueue.java:80) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+2018-04-18 10:46:30.272 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:40.275 [ERROR] [vert.x-worker-thread-5] database.mysql.repository.TestDataImpl [221] - failed to save record: Cannot translate a null SQLException
+java.lang.IllegalArgumentException: Cannot translate a null SQLException
+	at org.springframework.util.Assert.notNull(Assert.java:112) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:65) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:359) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:216) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:95) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:68) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:278) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.run(TaskQueue.java:80) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+2018-04-18 10:46:40.280 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:50.283 [ERROR] [vert.x-worker-thread-5] database.mysql.repository.TestDataImpl [221] - failed to save record: Cannot translate a null SQLException
+java.lang.IllegalArgumentException: Cannot translate a null SQLException
+	at org.springframework.util.Assert.notNull(Assert.java:112) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:65) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:359) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:216) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:95) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:68) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:278) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.run(TaskQueue.java:80) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+2018-04-18 10:46:50.290 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:53.012 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:53.102 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:53.199 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:53.370 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:53.565 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:53.632 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:53.699 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:53.736 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:53.778 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:53.823 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:53.868 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:53.912 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:53.956 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:54.001 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:54.045 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:54.078 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:54.116 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:54.157 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:54.201 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:54.247 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:54.290 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:54.335 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:54.380 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:54.427 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:54.469 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:54.513 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:54.561 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:54.614 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:54.661 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:54.707 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:54.748 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:54.794 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:54.837 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:54.881 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:54.927 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:54.970 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:55.015 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:55.060 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:55.105 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:55.150 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:55.244 [INFO ] [vert.x-worker-thread-6] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:56.244 [INFO ] [vert.x-worker-thread-7] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:57.245 [INFO ] [vert.x-worker-thread-8] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:58.246 [INFO ] [vert.x-worker-thread-9] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:46:59.243 [INFO ] [vert.x-worker-thread-10] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:47:00.245 [INFO ] [vert.x-worker-thread-11] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:47:01.245 [INFO ] [vert.x-worker-thread-12] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:47:02.244 [INFO ] [vert.x-worker-thread-13] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:47:03.245 [INFO ] [vert.x-worker-thread-14] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:47:04.244 [INFO ] [vert.x-worker-thread-15] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:47:05.241 [INFO ] [vert.x-worker-thread-16] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:47:06.246 [INFO ] [vert.x-worker-thread-17] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:47:07.246 [INFO ] [vert.x-worker-thread-18] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:47:08.240 [INFO ] [vert.x-worker-thread-19] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:47:09.242 [INFO ] [vert.x-worker-thread-0] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:47:10.240 [INFO ] [vert.x-worker-thread-1] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:47:11.245 [INFO ] [vert.x-worker-thread-2] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:47:12.240 [INFO ] [vert.x-worker-thread-3] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:47:13.244 [INFO ] [vert.x-worker-thread-4] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:47:14.245 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:47:15.245 [INFO ] [vert.x-worker-thread-6] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:47:16.243 [INFO ] [vert.x-worker-thread-7] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:47:17.239 [INFO ] [vert.x-worker-thread-8] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:59:04.710 [INFO ] [vert.x-eventloop-thread-0] obj.SqlReadConnection [55] - initializing connection
+2018-04-18 10:59:05.400 [INFO ] [vert.x-eventloop-thread-0] obj.SqlWriteConnection [55] - initializing connection
+2018-04-18 10:59:21.497 [INFO ] [vert.x-worker-thread-0] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:59:21.665 [INFO ] [vert.x-worker-thread-0] org.jooq.Constants [341] - 
+                                      
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@  @@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@        @@  @  @  @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@  @@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  Thank you for using jOOQ 3.9.1
+                                      
+2018-04-18 10:59:22.021 [INFO ] [vert.x-worker-thread-0] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:59:22.083 [INFO ] [vert.x-worker-thread-0] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:59:22.362 [INFO ] [vert.x-worker-thread-1] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:59:23.352 [INFO ] [vert.x-worker-thread-2] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:59:24.354 [INFO ] [vert.x-worker-thread-3] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:59:25.352 [INFO ] [vert.x-worker-thread-4] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:59:26.343 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:59:27.353 [INFO ] [vert.x-worker-thread-6] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:59:28.352 [INFO ] [vert.x-worker-thread-7] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:59:29.350 [INFO ] [vert.x-worker-thread-8] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:59:30.342 [INFO ] [vert.x-worker-thread-9] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:59:31.349 [INFO ] [vert.x-worker-thread-10] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:59:32.350 [INFO ] [vert.x-worker-thread-11] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:59:33.349 [INFO ] [vert.x-worker-thread-12] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:59:34.351 [INFO ] [vert.x-worker-thread-13] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:59:35.350 [INFO ] [vert.x-worker-thread-14] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:59:36.347 [INFO ] [vert.x-worker-thread-15] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:59:37.352 [INFO ] [vert.x-worker-thread-16] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:59:38.349 [INFO ] [vert.x-worker-thread-17] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:59:39.347 [INFO ] [vert.x-worker-thread-18] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:59:40.350 [INFO ] [vert.x-worker-thread-19] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:59:41.345 [INFO ] [vert.x-worker-thread-0] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:59:42.346 [INFO ] [vert.x-worker-thread-1] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:59:43.347 [INFO ] [vert.x-worker-thread-2] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:59:44.341 [INFO ] [vert.x-worker-thread-3] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:59:45.347 [INFO ] [vert.x-worker-thread-4] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:59:45.588 [ERROR] [vert.x-worker-thread-4] database.mysql.repository.TestDataImpl [221] - failed to save record: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Communications link failure
+
+The last packet successfully received from the server was 4 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 4 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.
+org.springframework.dao.RecoverableDataAccessException: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Communications link failure
+
+The last packet successfully received from the server was 4 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 4 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.
+	at org.jooq_3.9.1.MYSQL.debug(Unknown Source) ~[?:?]
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:98) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:364) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:216) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:95) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:68) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:278) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.run(TaskQueue.java:80) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 4 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_161]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_161]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_161]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_161]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:981) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3465) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ServerPreparedStatement.serverExecute(ServerPreparedStatement.java:1274) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ServerPreparedStatement.executeInternal(ServerPreparedStatement.java:780) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2957) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3375) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ServerPreparedStatement.serverExecute(ServerPreparedStatement.java:1274) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ServerPreparedStatement.executeInternal(ServerPreparedStatement.java:780) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+2018-04-18 10:59:46.341 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:59:46.349 [ERROR] [vert.x-worker-thread-5] database.mysql.repository.TestDataImpl [221] - failed to save record: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Communications link failure
+
+The last packet successfully received from the server was 4 milliseconds ago.  The last packet sent successfully to the server was 0 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 4 milliseconds ago.  The last packet sent successfully to the server was 0 milliseconds ago.
+org.springframework.dao.RecoverableDataAccessException: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Communications link failure
+
+The last packet successfully received from the server was 4 milliseconds ago.  The last packet sent successfully to the server was 0 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 4 milliseconds ago.  The last packet sent successfully to the server was 0 milliseconds ago.
+	at org.jooq_3.9.1.MYSQL.debug(Unknown Source) ~[?:?]
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:98) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:364) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:216) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:95) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:68) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:278) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.run(TaskQueue.java:80) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 4 milliseconds ago.  The last packet sent successfully to the server was 0 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_161]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_161]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_161]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_161]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:981) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3465) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2957) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3375) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+2018-04-18 10:59:47.347 [INFO ] [vert.x-worker-thread-6] app.ServiceImpl [94] - Save data into database
+2018-04-18 10:59:57.354 [ERROR] [vert.x-worker-thread-6] database.mysql.repository.TestDataImpl [221] - failed to save record: Cannot translate a null SQLException
+java.lang.IllegalArgumentException: Cannot translate a null SQLException
+	at org.springframework.util.Assert.notNull(Assert.java:112) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:65) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:359) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:216) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:95) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:68) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:278) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.run(TaskQueue.java:80) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+2018-04-18 10:59:57.367 [INFO ] [vert.x-worker-thread-6] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:00:07.376 [ERROR] [vert.x-worker-thread-6] database.mysql.repository.TestDataImpl [221] - failed to save record: Cannot translate a null SQLException
+java.lang.IllegalArgumentException: Cannot translate a null SQLException
+	at org.springframework.util.Assert.notNull(Assert.java:112) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:65) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:359) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:216) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:95) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:68) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:278) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.run(TaskQueue.java:80) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+2018-04-18 11:00:07.379 [INFO ] [vert.x-worker-thread-6] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:00:08.382 [INFO ] [vert.x-worker-thread-6] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:00:08.836 [INFO ] [vert.x-worker-thread-6] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:00:08.892 [INFO ] [vert.x-worker-thread-6] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:00:08.937 [INFO ] [vert.x-worker-thread-6] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:00:08.978 [INFO ] [vert.x-worker-thread-6] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:00:09.044 [INFO ] [vert.x-worker-thread-6] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:00:09.112 [INFO ] [vert.x-worker-thread-6] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:00:09.145 [INFO ] [vert.x-worker-thread-6] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:00:09.179 [INFO ] [vert.x-worker-thread-6] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:00:09.215 [INFO ] [vert.x-worker-thread-6] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:00:09.257 [INFO ] [vert.x-worker-thread-6] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:00:09.290 [INFO ] [vert.x-worker-thread-6] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:00:09.324 [INFO ] [vert.x-worker-thread-6] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:00:09.357 [INFO ] [vert.x-worker-thread-6] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:00:09.394 [INFO ] [vert.x-worker-thread-6] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:00:09.434 [INFO ] [vert.x-worker-thread-6] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:00:09.468 [INFO ] [vert.x-worker-thread-6] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:00:09.503 [INFO ] [vert.x-worker-thread-6] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:00:09.540 [INFO ] [vert.x-worker-thread-6] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:00:09.581 [INFO ] [vert.x-worker-thread-6] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:00:10.341 [INFO ] [vert.x-worker-thread-7] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:00:11.345 [INFO ] [vert.x-worker-thread-8] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:00:12.340 [INFO ] [vert.x-worker-thread-9] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:00:13.345 [INFO ] [vert.x-worker-thread-10] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:04:09.177 [INFO ] [vert.x-eventloop-thread-0] obj.SqlReadConnection [55] - initializing connection
+2018-04-18 11:04:09.233 [ERROR] [vert.x-eventloop-thread-0] com.zaxxer.hikari.util.PropertyBeanSetter [133] - Property minEvictableIdleTimeMillis does not exist on target class com.mysql.jdbc.jdbc2.optional.MysqlDataSource
+2018-04-18 11:14:08.908 [INFO ] [vert.x-eventloop-thread-0] obj.SqlReadConnection [55] - initializing connection
+2018-04-18 11:14:09.197 [INFO ] [vert.x-eventloop-thread-0] obj.SqlWriteConnection [55] - initializing connection
+2018-04-18 11:20:13.531 [INFO ] [vert.x-worker-thread-0] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:20:13.630 [INFO ] [vert.x-worker-thread-0] org.jooq.Constants [341] - 
+                                      
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@  @@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@        @@  @  @  @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@  @@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  Thank you for using jOOQ 3.9.1
+                                      
+2018-04-18 11:20:14.023 [INFO ] [vert.x-worker-thread-1] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:20:15.017 [INFO ] [vert.x-worker-thread-2] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:20:16.018 [INFO ] [vert.x-worker-thread-3] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:20:17.007 [INFO ] [vert.x-worker-thread-4] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:20:18.019 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:20:19.020 [INFO ] [vert.x-worker-thread-6] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:20:20.016 [INFO ] [vert.x-worker-thread-7] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:20:21.018 [INFO ] [vert.x-worker-thread-8] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:20:22.018 [INFO ] [vert.x-worker-thread-9] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:20:23.018 [INFO ] [vert.x-worker-thread-10] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:20:24.008 [INFO ] [vert.x-worker-thread-11] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:20:25.017 [INFO ] [vert.x-worker-thread-12] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:20:25.215 [ERROR] [vert.x-worker-thread-12] database.mysql.repository.TestDataImpl [221] - failed to save record: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Communications link failure
+
+The last packet successfully received from the server was 6 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 6 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.
+org.springframework.dao.RecoverableDataAccessException: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Communications link failure
+
+The last packet successfully received from the server was 6 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 6 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.
+	at org.jooq_3.9.1.MYSQL.debug(Unknown Source) ~[?:?]
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:98) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:364) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:216) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:95) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:68) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:278) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.run(TaskQueue.java:80) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 6 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_161]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_161]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_161]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_161]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:981) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3465) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ServerPreparedStatement.serverExecute(ServerPreparedStatement.java:1274) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ServerPreparedStatement.executeInternal(ServerPreparedStatement.java:780) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2957) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3375) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ServerPreparedStatement.serverExecute(ServerPreparedStatement.java:1274) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ServerPreparedStatement.executeInternal(ServerPreparedStatement.java:780) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+2018-04-18 11:20:26.017 [INFO ] [vert.x-worker-thread-13] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:20:26.056 [ERROR] [vert.x-worker-thread-13] database.mysql.repository.TestDataImpl [221] - failed to save record: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Communications link failure
+
+The last packet successfully received from the server was 27 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 27 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.
+org.springframework.dao.RecoverableDataAccessException: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Communications link failure
+
+The last packet successfully received from the server was 27 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 27 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.
+	at org.jooq_3.9.1.MYSQL.debug(Unknown Source) ~[?:?]
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:98) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:364) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:216) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:95) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:68) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:278) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.run(TaskQueue.java:80) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 27 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_161]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_161]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_161]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_161]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:981) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3465) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2957) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3375) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+2018-04-18 11:20:27.015 [INFO ] [vert.x-worker-thread-14] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:20:37.021 [ERROR] [vert.x-worker-thread-14] database.mysql.repository.TestDataImpl [221] - failed to save record: Cannot translate a null SQLException
+java.lang.IllegalArgumentException: Cannot translate a null SQLException
+	at org.springframework.util.Assert.notNull(Assert.java:112) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:65) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:359) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:216) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:95) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:68) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:278) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.run(TaskQueue.java:80) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+2018-04-18 11:20:37.027 [INFO ] [vert.x-worker-thread-14] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:20:47.029 [INFO ] [vert.x-worker-thread-14] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:20:47.062 [INFO ] [vert.x-worker-thread-14] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:20:47.096 [INFO ] [vert.x-worker-thread-14] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:20:47.163 [INFO ] [vert.x-worker-thread-14] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:20:47.231 [INFO ] [vert.x-worker-thread-14] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:20:47.276 [INFO ] [vert.x-worker-thread-14] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:20:47.320 [INFO ] [vert.x-worker-thread-14] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:20:47.365 [INFO ] [vert.x-worker-thread-14] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:20:47.409 [INFO ] [vert.x-worker-thread-14] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:20:47.453 [INFO ] [vert.x-worker-thread-14] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:20:47.498 [INFO ] [vert.x-worker-thread-14] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:20:47.543 [INFO ] [vert.x-worker-thread-14] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:20:47.589 [INFO ] [vert.x-worker-thread-14] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:20:47.633 [INFO ] [vert.x-worker-thread-14] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:20:47.679 [INFO ] [vert.x-worker-thread-14] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:20:47.721 [INFO ] [vert.x-worker-thread-14] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:20:47.766 [INFO ] [vert.x-worker-thread-14] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:20:47.814 [INFO ] [vert.x-worker-thread-14] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:20:47.855 [INFO ] [vert.x-worker-thread-14] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:20:48.007 [INFO ] [vert.x-worker-thread-15] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:20:49.019 [INFO ] [vert.x-worker-thread-16] app.ServiceImpl [94] - Save data into database
+2018-04-18 11:20:50.014 [INFO ] [vert.x-worker-thread-17] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:00:27.753 [INFO ] [vert.x-eventloop-thread-0] obj.SqlReadConnection [55] - initializing connection
+2018-04-18 14:00:28.683 [INFO ] [vert.x-eventloop-thread-0] obj.SqlWriteConnection [55] - initializing connection
+2018-04-18 14:01:00.029 [INFO ] [vert.x-eventloop-thread-0] obj.SqlReadConnection [55] - initializing connection
+2018-04-18 14:01:02.504 [INFO ] [vert.x-eventloop-thread-0] obj.SqlWriteConnection [55] - initializing connection
+2018-04-18 14:01:31.774 [INFO ] [vert.x-worker-thread-0] app.ServiceImpl [95] - Save data into database
+2018-04-18 14:01:32.469 [INFO ] [vert.x-worker-thread-0] org.jooq.Constants [341] - 
+                                      
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@  @@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@        @@  @  @  @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@  @@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  Thank you for using jOOQ 3.9.1
+                                      
+2018-04-18 14:01:33.310 [INFO ] [vert.x-worker-thread-0] app.ServiceImpl [95] - Save data into database
+2018-04-18 14:01:33.697 [INFO ] [vert.x-worker-thread-0] app.ServiceImpl [95] - Save data into database
+2018-04-18 14:01:33.752 [INFO ] [vert.x-worker-thread-0] app.ServiceImpl [95] - Save data into database
+2018-04-18 14:01:33.810 [INFO ] [vert.x-worker-thread-0] app.ServiceImpl [95] - Save data into database
+2018-04-18 14:01:33.874 [INFO ] [vert.x-worker-thread-0] app.ServiceImpl [95] - Save data into database
+2018-04-18 14:01:33.921 [INFO ] [vert.x-worker-thread-0] app.ServiceImpl [95] - Save data into database
+2018-04-18 14:01:34.119 [INFO ] [vert.x-worker-thread-0] app.ServiceImpl [95] - Save data into database
+2018-04-18 14:01:34.344 [INFO ] [vert.x-worker-thread-0] app.ServiceImpl [95] - Save data into database
+2018-04-18 14:01:35.246 [INFO ] [vert.x-worker-thread-1] app.ServiceImpl [95] - Save data into database
+2018-04-18 14:01:36.226 [INFO ] [vert.x-worker-thread-2] app.ServiceImpl [95] - Save data into database
+2018-04-18 14:01:37.224 [INFO ] [vert.x-worker-thread-3] app.ServiceImpl [95] - Save data into database
+2018-04-18 14:01:38.224 [INFO ] [vert.x-worker-thread-4] app.ServiceImpl [95] - Save data into database
+2018-04-18 14:01:39.230 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [95] - Save data into database
+2018-04-18 14:01:40.229 [INFO ] [vert.x-worker-thread-6] app.ServiceImpl [95] - Save data into database
+2018-04-18 14:01:41.233 [INFO ] [vert.x-worker-thread-7] app.ServiceImpl [95] - Save data into database
+2018-04-18 14:01:42.227 [INFO ] [vert.x-worker-thread-8] app.ServiceImpl [95] - Save data into database
+2018-04-18 14:01:43.230 [INFO ] [vert.x-worker-thread-9] app.ServiceImpl [95] - Save data into database
+2018-04-18 14:01:44.236 [INFO ] [vert.x-worker-thread-10] app.ServiceImpl [95] - Save data into database
+2018-04-18 14:01:45.229 [INFO ] [vert.x-worker-thread-11] app.ServiceImpl [95] - Save data into database
+2018-04-18 14:01:46.225 [INFO ] [vert.x-worker-thread-12] app.ServiceImpl [95] - Save data into database
+2018-04-18 14:01:47.230 [INFO ] [vert.x-worker-thread-13] app.ServiceImpl [95] - Save data into database
+2018-04-18 14:01:48.233 [INFO ] [vert.x-worker-thread-14] app.ServiceImpl [95] - Save data into database
+2018-04-18 14:01:49.233 [INFO ] [vert.x-worker-thread-15] app.ServiceImpl [95] - Save data into database
+2018-04-18 14:01:50.230 [INFO ] [vert.x-worker-thread-16] app.ServiceImpl [95] - Save data into database
+2018-04-18 14:01:51.235 [INFO ] [vert.x-worker-thread-17] app.ServiceImpl [95] - Save data into database
+2018-04-18 14:01:52.224 [INFO ] [vert.x-worker-thread-18] app.ServiceImpl [95] - Save data into database
+2018-04-18 14:01:53.231 [INFO ] [vert.x-worker-thread-19] app.ServiceImpl [95] - Save data into database
+2018-04-18 14:01:54.231 [INFO ] [vert.x-worker-thread-0] app.ServiceImpl [95] - Save data into database
+2018-04-18 14:01:55.223 [INFO ] [vert.x-worker-thread-1] app.ServiceImpl [95] - Save data into database
+2018-04-18 14:01:56.229 [INFO ] [vert.x-worker-thread-2] app.ServiceImpl [95] - Save data into database
+2018-04-18 14:01:57.229 [INFO ] [vert.x-worker-thread-3] app.ServiceImpl [95] - Save data into database
+2018-04-18 14:01:58.227 [INFO ] [vert.x-worker-thread-4] app.ServiceImpl [95] - Save data into database
+2018-04-18 14:01:59.222 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [95] - Save data into database
+2018-04-18 14:02:00.223 [INFO ] [vert.x-worker-thread-6] app.ServiceImpl [95] - Save data into database
+2018-04-18 14:02:01.228 [INFO ] [vert.x-worker-thread-7] app.ServiceImpl [95] - Save data into database
+2018-04-18 14:02:02.224 [INFO ] [vert.x-worker-thread-8] app.ServiceImpl [95] - Save data into database
+2018-04-18 14:02:03.230 [INFO ] [vert.x-worker-thread-9] app.ServiceImpl [95] - Save data into database
+2018-04-18 14:02:04.238 [INFO ] [vert.x-worker-thread-10] app.ServiceImpl [95] - Save data into database
+2018-04-18 14:02:05.228 [INFO ] [vert.x-worker-thread-11] app.ServiceImpl [95] - Save data into database
+2018-04-18 14:06:46.016 [INFO ] [vert.x-eventloop-thread-0] obj.SqlReadConnection [57] - initializing connection
+2018-04-18 14:06:47.521 [INFO ] [vert.x-eventloop-thread-0] obj.SqlWriteConnection [54] - initializing connection
+2018-04-18 14:12:20.368 [INFO ] [vert.x-eventloop-thread-0] obj.SqlReadConnection [57] - initializing connection
+2018-04-18 14:12:21.098 [INFO ] [vert.x-eventloop-thread-0] obj.SqlWriteConnection [54] - initializing connection
+2018-04-18 14:13:40.883 [INFO ] [vert.x-eventloop-thread-0] obj.SqlReadConnection [59] - initializing connection
+2018-04-18 14:13:41.627 [INFO ] [vert.x-eventloop-thread-0] obj.SqlWriteConnection [56] - initializing connection
+2018-04-18 14:16:24.930 [INFO ] [vert.x-eventloop-thread-0] obj.SqlReadConnection [53] - initializing connection
+2018-04-18 14:16:25.633 [INFO ] [vert.x-eventloop-thread-0] obj.SqlWriteConnection [50] - initializing connection
+2018-04-18 14:16:26.215 [INFO ] [vert.x-eventloop-thread-0] obj.SqlReadConnection [53] - initializing connection
+2018-04-18 14:16:26.220 [INFO ] [vert.x-eventloop-thread-0] obj.SqlWriteConnection [50] - initializing connection
+2018-04-18 14:16:26.221 [INFO ] [vert.x-eventloop-thread-0] obj.SqlReadConnection [53] - initializing connection
+2018-04-18 14:16:26.221 [INFO ] [vert.x-eventloop-thread-0] obj.SqlWriteConnection [50] - initializing connection
+2018-04-18 14:28:47.366 [INFO ] [vert.x-eventloop-thread-0] obj.SqlReadConnection [55] - initializing connection
+2018-04-18 14:28:47.701 [INFO ] [vert.x-eventloop-thread-0] obj.SqlWriteConnection [55] - initializing connection
+2018-04-18 14:28:47.703 [INFO ] [vert.x-eventloop-thread-0] obj.SqlReadConnection [55] - initializing connection
+2018-04-18 14:28:47.704 [INFO ] [vert.x-eventloop-thread-0] obj.SqlWriteConnection [55] - initializing connection
+2018-04-18 14:29:47.939 [INFO ] [vert.x-eventloop-thread-0] obj.SqlReadConnection [55] - initializing connection
+2018-04-18 14:29:48.211 [INFO ] [vert.x-eventloop-thread-0] obj.SqlWriteConnection [55] - initializing connection
+2018-04-18 14:30:26.924 [INFO ] [vert.x-eventloop-thread-0] obj.SqlReadConnection [55] - initializing connection
+2018-04-18 14:30:27.185 [INFO ] [vert.x-eventloop-thread-0] obj.SqlWriteConnection [55] - initializing connection
+2018-04-18 14:30:40.685 [INFO ] [vert.x-worker-thread-0] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:30:42.612 [INFO ] [vert.x-worker-thread-0] org.jooq.Constants [341] - 
+                                      
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@  @@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@        @@  @  @  @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@  @@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  Thank you for using jOOQ 3.9.1
+                                      
+2018-04-18 14:30:43.284 [INFO ] [vert.x-worker-thread-0] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:30:43.426 [INFO ] [vert.x-worker-thread-0] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:30:43.514 [INFO ] [vert.x-worker-thread-0] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:30:43.570 [INFO ] [vert.x-worker-thread-0] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:30:43.983 [INFO ] [vert.x-worker-thread-1] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:30:44.984 [INFO ] [vert.x-worker-thread-2] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:30:45.984 [INFO ] [vert.x-worker-thread-3] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:30:46.984 [INFO ] [vert.x-worker-thread-4] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:30:47.991 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:30:48.987 [INFO ] [vert.x-worker-thread-6] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:30:49.985 [INFO ] [vert.x-worker-thread-7] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:30:50.993 [INFO ] [vert.x-worker-thread-8] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:30:51.993 [INFO ] [vert.x-worker-thread-9] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:30:52.994 [INFO ] [vert.x-worker-thread-10] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:30:53.993 [INFO ] [vert.x-worker-thread-11] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:30:54.993 [INFO ] [vert.x-worker-thread-12] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:30:55.992 [INFO ] [vert.x-worker-thread-13] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:30:56.993 [INFO ] [vert.x-worker-thread-14] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:30:57.993 [INFO ] [vert.x-worker-thread-15] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:30:58.992 [INFO ] [vert.x-worker-thread-16] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:30:59.991 [INFO ] [vert.x-worker-thread-17] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:00.992 [INFO ] [vert.x-worker-thread-18] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:01.991 [INFO ] [vert.x-worker-thread-19] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:03.354 [INFO ] [vert.x-worker-thread-19] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:03.982 [INFO ] [vert.x-worker-thread-0] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:04.988 [INFO ] [vert.x-worker-thread-1] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:05.992 [INFO ] [vert.x-worker-thread-2] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:06.989 [INFO ] [vert.x-worker-thread-3] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:07.989 [INFO ] [vert.x-worker-thread-4] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:09.090 [ERROR] [vert.x-worker-thread-4] database.mysql.repository.TestDataImpl [225] - failed to save record: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Communications link failure
+
+The last packet successfully received from the server was 15 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 15 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.
+org.springframework.dao.RecoverableDataAccessException: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Communications link failure
+
+The last packet successfully received from the server was 15 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 15 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.
+	at org.jooq_3.9.1.MYSQL.debug(Unknown Source) ~[?:?]
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:98) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:364) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:217) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:95) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:68) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:278) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.run(TaskQueue.java:80) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 15 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_161]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_161]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_161]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_161]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:981) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3465) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2957) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3375) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+2018-04-18 14:31:09.197 [INFO ] [vert.x-worker-thread-4] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:09.208 [ERROR] [vert.x-worker-thread-4] database.mysql.repository.TestDataImpl [225] - failed to save record: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Communications link failure
+
+The last packet successfully received from the server was 5 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 5 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.
+org.springframework.dao.RecoverableDataAccessException: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Communications link failure
+
+The last packet successfully received from the server was 5 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 5 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.
+	at org.jooq_3.9.1.MYSQL.debug(Unknown Source) ~[?:?]
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:98) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:364) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:217) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:95) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:68) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:278) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.run(TaskQueue.java:80) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 5 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_161]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_161]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_161]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_161]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:981) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3465) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2957) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3375) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+2018-04-18 14:31:09.989 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:19.996 [ERROR] [vert.x-worker-thread-5] database.mysql.repository.TestDataImpl [225] - failed to save record: Cannot translate a null SQLException
+java.lang.IllegalArgumentException: Cannot translate a null SQLException
+	at org.springframework.util.Assert.notNull(Assert.java:112) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:65) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:359) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:217) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:95) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:68) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:278) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.run(TaskQueue.java:80) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+2018-04-18 14:31:20.004 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:30.009 [ERROR] [vert.x-worker-thread-5] database.mysql.repository.TestDataImpl [225] - failed to save record: Cannot translate a null SQLException
+java.lang.IllegalArgumentException: Cannot translate a null SQLException
+	at org.springframework.util.Assert.notNull(Assert.java:112) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:65) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:359) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:217) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:95) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:68) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:278) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.run(TaskQueue.java:80) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+2018-04-18 14:31:30.017 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:40.020 [ERROR] [vert.x-worker-thread-5] database.mysql.repository.TestDataImpl [225] - failed to save record: Cannot translate a null SQLException
+java.lang.IllegalArgumentException: Cannot translate a null SQLException
+	at org.springframework.util.Assert.notNull(Assert.java:112) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:65) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:359) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:217) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:95) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:68) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:278) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.run(TaskQueue.java:80) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+2018-04-18 14:31:40.025 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:50.028 [ERROR] [vert.x-worker-thread-5] database.mysql.repository.TestDataImpl [225] - failed to save record: Cannot translate a null SQLException
+java.lang.IllegalArgumentException: Cannot translate a null SQLException
+	at org.springframework.util.Assert.notNull(Assert.java:112) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:65) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:359) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:217) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:95) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:68) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:278) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.run(TaskQueue.java:80) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+2018-04-18 14:31:50.035 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:55.947 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:55.986 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:56.025 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:56.081 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:56.117 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:56.159 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:56.193 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:56.227 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:56.329 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:56.371 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:56.407 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:56.449 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:56.484 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:56.536 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:56.572 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:56.664 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:56.707 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:56.750 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:56.784 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:56.832 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:56.873 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:56.917 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:56.966 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:57.011 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:57.053 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:57.100 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:57.142 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:57.190 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:57.232 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:57.276 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:57.357 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:57.399 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:57.444 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:57.488 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:57.535 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:57.579 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:57.622 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:57.666 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:57.700 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:57.734 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:57.767 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:57.802 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:57.836 [INFO ] [vert.x-worker-thread-5] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:57.989 [INFO ] [vert.x-worker-thread-6] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:58.987 [INFO ] [vert.x-worker-thread-7] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:31:59.988 [INFO ] [vert.x-worker-thread-8] app.ServiceImpl [94] - Save data into database
+2018-04-18 14:32:00.988 [INFO ] [vert.x-worker-thread-9] app.ServiceImpl [94] - Save data into database

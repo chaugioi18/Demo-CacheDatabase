@@ -1,0 +1,102 @@
+group 'Demo-database'
+version '1.0'
+
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.github.jengelman.gradle.plugins:shadow:2.0.0'
+
+        classpath 'org.jooq:jooq:3.9.1'
+        classpath 'org.jooq:jooq-meta:3.9.1'
+        classpath 'org.jooq:jooq-codegen:3.9.1'
+        classpath 'mysql:mysql-connector-java:5.1.38'
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.0'
+    distributionUrl = "https://services.gradle.org/distributions/gradle-$gradleVersion-all.zip"
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'com.github.johnrengelman.shadow'
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'io.vertx:vertx-core:3.4.2'
+    compile 'io.vertx:vertx-web:3.4.2'
+    compile 'io.vertx:vertx-rabbitmq-client:3.4.2'
+    compile 'io.vertx:vertx-health-check:3.4.2'
+
+    compile 'com.google.inject:guice:4.0'
+
+    compile 'org.apache.logging.log4j:log4j-core:2.8.2'
+    compile 'org.apache.logging.log4j:log4j-api:2.8.2'
+
+    compile 'org.apache.logging.log4j:log4j-slf4j-impl:2.8.2'
+    compile 'com.google.code.gson:gson:2.8.1'
+    compile 'org.springframework:spring-context:4.1.6.RELEASE'
+    compile 'org.springframework:spring-jdbc:4.1.6.RELEASE'
+    compile 'org.jooq:jooq:3.9.1'
+    compile 'org.jooq:jooq-codegen:3.9.1'
+    compile 'com.zaxxer:HikariCP-java6:2.3.8'
+    compile 'mysql:mysql-connector-java:5.1.38'
+
+    compile 'io.vertx:vertx-redis-client:3.5.0'
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+shadowJar {
+    classifier = null
+    version = version
+    manifest {
+        attributes 'Main-Class': 'io.vertx.core.Starter'
+        attributes 'Main-Verticle': 'app.Start'
+    }
+    mergeServiceFiles {
+        include 'META-INF/services/io.vertx.core.spi.VerticleFactory'
+    }
+}
+
+//task generate(description: 'generate database model')  {
+//    def writer = new StringWriter()
+//
+//    def xml = new groovy.xml.MarkupBuilder(writer)
+//            .configuration('xmlns': 'http://www.jooq.org/xsd/jooq-codegen-3.9.0.xsd') {
+//        jdbc() {
+//            driver('com.mysql.jdbc.Driver')
+//            url('jdbc:mysql://localhost:9910')
+//            user('root')
+//            password('1@3Pikachu')
+//        }
+//        generator() {
+//            name 'org.jooq.util.JavaGenerator'
+//            database() {
+//                schemata() {
+//                    schema() {
+//                        inputSchema 'test'
+//                    }
+//                }
+//            }
+//            generate() {
+//                fluentSetters true
+//            }
+//            target() {
+//                packageName('database.mysql.model')
+//                directory('src/main/java')
+//            }
+//        }
+//    }
+//    org.jooq.util.GenerationTool.generate(
+//            javax.xml.bind.JAXB.unmarshal(new StringReader(writer.toString()), org.jooq.util.jaxb.Configuration.class)
+//    )
+//}

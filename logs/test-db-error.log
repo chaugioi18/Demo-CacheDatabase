@@ -1,0 +1,1033 @@
+2018-04-18 09:03:52.554 [ERROR] [vert.x-worker-thread-17] database.mysql.repository.TestDataImpl [215] - failed to save record: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Communications link failure
+
+The last packet successfully received from the server was 13 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 13 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.
+org.springframework.dao.RecoverableDataAccessException: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Communications link failure
+
+The last packet successfully received from the server was 13 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 13 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.
+	at org.jooq_3.9.1.MYSQL.debug(Unknown Source) ~[?:?]
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:98) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:364) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:210) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:90) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:63) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:271) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.lambda$new$0(TaskQueue.java:60) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 13 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_161]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_161]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_161]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_161]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:981) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3465) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2957) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3375) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+2018-04-18 09:03:53.382 [ERROR] [vert.x-worker-thread-18] database.mysql.repository.TestDataImpl [215] - failed to save record: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Communications link failure
+
+The last packet successfully received from the server was 9 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 9 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.
+org.springframework.dao.RecoverableDataAccessException: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Communications link failure
+
+The last packet successfully received from the server was 9 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 9 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.
+	at org.jooq_3.9.1.MYSQL.debug(Unknown Source) ~[?:?]
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:98) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:364) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:210) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:90) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:63) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:271) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.lambda$new$0(TaskQueue.java:60) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 9 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_161]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_161]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_161]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_161]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:981) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3465) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2957) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3375) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+2018-04-18 09:04:04.367 [ERROR] [vert.x-worker-thread-19] database.mysql.repository.TestDataImpl [215] - failed to save record: Cannot translate a null SQLException
+java.lang.IllegalArgumentException: Cannot translate a null SQLException
+	at org.springframework.util.Assert.notNull(Assert.java:112) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:65) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:359) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:210) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:90) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:63) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:271) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.lambda$new$0(TaskQueue.java:60) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+2018-04-18 09:04:14.369 [ERROR] [vert.x-worker-thread-19] database.mysql.repository.TestDataImpl [215] - failed to save record: Cannot translate a null SQLException
+java.lang.IllegalArgumentException: Cannot translate a null SQLException
+	at org.springframework.util.Assert.notNull(Assert.java:112) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:65) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:359) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:210) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:90) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:63) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:271) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.lambda$new$0(TaskQueue.java:60) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+2018-04-18 09:15:51.848 [ERROR] [vert.x-worker-thread-14] database.mysql.repository.TestDataImpl [215] - failed to save record: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Server shutdown in progress; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Server shutdown in progress
+org.springframework.dao.DataAccessResourceFailureException: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Server shutdown in progress; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Server shutdown in progress
+	at org.jooq_3.9.1.MYSQL.debug(Unknown Source) ~[?:?]
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:79) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:364) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:210) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:90) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:63) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:271) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.lambda$new$0(TaskQueue.java:60) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Server shutdown in progress
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_161]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_161]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_161]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_161]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.Util.getInstance(Util.java:387) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:917) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ServerPreparedStatement.serverExecute(ServerPreparedStatement.java:1274) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ServerPreparedStatement.executeInternal(ServerPreparedStatement.java:780) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+2018-04-18 09:15:52.690 [ERROR] [vert.x-worker-thread-15] database.mysql.repository.TestDataImpl [215] - failed to save record: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Communications link failure
+
+The last packet successfully received from the server was 8 milliseconds ago.  The last packet sent successfully to the server was 0 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 8 milliseconds ago.  The last packet sent successfully to the server was 0 milliseconds ago.
+org.springframework.dao.RecoverableDataAccessException: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Communications link failure
+
+The last packet successfully received from the server was 8 milliseconds ago.  The last packet sent successfully to the server was 0 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 8 milliseconds ago.  The last packet sent successfully to the server was 0 milliseconds ago.
+	at org.jooq_3.9.1.MYSQL.debug(Unknown Source) ~[?:?]
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:98) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:364) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:210) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:90) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:63) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:271) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.lambda$new$0(TaskQueue.java:60) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 8 milliseconds ago.  The last packet sent successfully to the server was 0 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_161]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_161]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_161]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_161]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:981) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3465) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2957) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3375) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+2018-04-18 09:16:03.669 [ERROR] [vert.x-worker-thread-16] database.mysql.repository.TestDataImpl [215] - failed to save record: Cannot translate a null SQLException
+java.lang.IllegalArgumentException: Cannot translate a null SQLException
+	at org.springframework.util.Assert.notNull(Assert.java:112) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:65) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:359) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:210) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:90) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:63) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:271) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.lambda$new$0(TaskQueue.java:60) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+2018-04-18 09:16:13.679 [ERROR] [vert.x-worker-thread-16] database.mysql.repository.TestDataImpl [215] - failed to save record: Cannot translate a null SQLException
+java.lang.IllegalArgumentException: Cannot translate a null SQLException
+	at org.springframework.util.Assert.notNull(Assert.java:112) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:65) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:359) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:210) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:90) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:63) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:271) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.lambda$new$0(TaskQueue.java:60) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+2018-04-18 10:44:26.450 [ERROR] [vert.x-eventloop-thread-0] database.redis.RedisAdapter [53] - Connected failed
+2018-04-18 10:46:08.617 [ERROR] [vert.x-worker-thread-3] database.mysql.repository.TestDataImpl [221] - failed to save record: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Communications link failure
+
+The last packet successfully received from the server was 3 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 3 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.
+org.springframework.dao.RecoverableDataAccessException: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Communications link failure
+
+The last packet successfully received from the server was 3 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 3 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.
+	at org.jooq_3.9.1.MYSQL.debug(Unknown Source) ~[?:?]
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:98) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:364) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:216) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:95) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:68) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:278) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.run(TaskQueue.java:80) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 3 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_161]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_161]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_161]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_161]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:981) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3465) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2957) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3375) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+2018-04-18 10:46:09.244 [ERROR] [vert.x-worker-thread-4] database.mysql.repository.TestDataImpl [221] - failed to save record: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Could not retrieve transation read-only status server; nested exception is java.sql.SQLException: Could not retrieve transation read-only status server
+org.springframework.dao.TransientDataAccessResourceException: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Could not retrieve transation read-only status server; nested exception is java.sql.SQLException: Could not retrieve transation read-only status server
+	at org.jooq_3.9.1.MYSQL.debug(Unknown Source) ~[?:?]
+	at org.springframework.jdbc.support.SQLStateSQLExceptionTranslator.doTranslate(SQLStateSQLExceptionTranslator.java:108) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:364) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:216) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:95) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:68) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:278) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.run(TaskQueue.java:80) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+Caused by: java.sql.SQLException: Could not retrieve transation read-only status server
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:957) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:896) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:885) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:877) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:873) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.isReadOnly(ConnectionImpl.java:3629) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.isReadOnly(ConnectionImpl.java:3598) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.checkReadOnlySafeStatement(PreparedStatement.java:1117) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1137) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 1 milliseconds ago.  The last packet sent successfully to the server was 0 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_161]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_161]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_161]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_161]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:981) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3465) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2547) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2505) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.StatementImpl.executeQuery(StatementImpl.java:1370) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.isReadOnly(ConnectionImpl.java:3623) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.isReadOnly(ConnectionImpl.java:3598) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.checkReadOnlySafeStatement(PreparedStatement.java:1117) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1137) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2957) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3375) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2547) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2505) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.StatementImpl.executeQuery(StatementImpl.java:1370) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.isReadOnly(ConnectionImpl.java:3623) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.isReadOnly(ConnectionImpl.java:3598) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.checkReadOnlySafeStatement(PreparedStatement.java:1117) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1137) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+2018-04-18 10:46:20.252 [ERROR] [vert.x-worker-thread-5] database.mysql.repository.TestDataImpl [221] - failed to save record: Cannot translate a null SQLException
+java.lang.IllegalArgumentException: Cannot translate a null SQLException
+	at org.springframework.util.Assert.notNull(Assert.java:112) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:65) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:359) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:216) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:95) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:68) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:278) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.run(TaskQueue.java:80) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+2018-04-18 10:46:30.265 [ERROR] [vert.x-worker-thread-5] database.mysql.repository.TestDataImpl [221] - failed to save record: Cannot translate a null SQLException
+java.lang.IllegalArgumentException: Cannot translate a null SQLException
+	at org.springframework.util.Assert.notNull(Assert.java:112) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:65) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:359) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:216) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:95) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:68) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:278) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.run(TaskQueue.java:80) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+2018-04-18 10:46:40.275 [ERROR] [vert.x-worker-thread-5] database.mysql.repository.TestDataImpl [221] - failed to save record: Cannot translate a null SQLException
+java.lang.IllegalArgumentException: Cannot translate a null SQLException
+	at org.springframework.util.Assert.notNull(Assert.java:112) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:65) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:359) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:216) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:95) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:68) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:278) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.run(TaskQueue.java:80) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+2018-04-18 10:46:50.283 [ERROR] [vert.x-worker-thread-5] database.mysql.repository.TestDataImpl [221] - failed to save record: Cannot translate a null SQLException
+java.lang.IllegalArgumentException: Cannot translate a null SQLException
+	at org.springframework.util.Assert.notNull(Assert.java:112) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:65) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:359) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:216) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:95) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:68) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:278) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.run(TaskQueue.java:80) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+2018-04-18 10:59:45.588 [ERROR] [vert.x-worker-thread-4] database.mysql.repository.TestDataImpl [221] - failed to save record: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Communications link failure
+
+The last packet successfully received from the server was 4 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 4 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.
+org.springframework.dao.RecoverableDataAccessException: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Communications link failure
+
+The last packet successfully received from the server was 4 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 4 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.
+	at org.jooq_3.9.1.MYSQL.debug(Unknown Source) ~[?:?]
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:98) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:364) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:216) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:95) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:68) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:278) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.run(TaskQueue.java:80) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 4 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_161]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_161]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_161]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_161]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:981) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3465) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ServerPreparedStatement.serverExecute(ServerPreparedStatement.java:1274) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ServerPreparedStatement.executeInternal(ServerPreparedStatement.java:780) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2957) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3375) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ServerPreparedStatement.serverExecute(ServerPreparedStatement.java:1274) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ServerPreparedStatement.executeInternal(ServerPreparedStatement.java:780) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+2018-04-18 10:59:46.349 [ERROR] [vert.x-worker-thread-5] database.mysql.repository.TestDataImpl [221] - failed to save record: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Communications link failure
+
+The last packet successfully received from the server was 4 milliseconds ago.  The last packet sent successfully to the server was 0 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 4 milliseconds ago.  The last packet sent successfully to the server was 0 milliseconds ago.
+org.springframework.dao.RecoverableDataAccessException: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Communications link failure
+
+The last packet successfully received from the server was 4 milliseconds ago.  The last packet sent successfully to the server was 0 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 4 milliseconds ago.  The last packet sent successfully to the server was 0 milliseconds ago.
+	at org.jooq_3.9.1.MYSQL.debug(Unknown Source) ~[?:?]
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:98) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:364) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:216) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:95) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:68) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:278) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.run(TaskQueue.java:80) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 4 milliseconds ago.  The last packet sent successfully to the server was 0 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_161]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_161]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_161]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_161]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:981) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3465) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2957) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3375) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+2018-04-18 10:59:57.354 [ERROR] [vert.x-worker-thread-6] database.mysql.repository.TestDataImpl [221] - failed to save record: Cannot translate a null SQLException
+java.lang.IllegalArgumentException: Cannot translate a null SQLException
+	at org.springframework.util.Assert.notNull(Assert.java:112) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:65) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:359) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:216) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:95) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:68) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:278) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.run(TaskQueue.java:80) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+2018-04-18 11:00:07.376 [ERROR] [vert.x-worker-thread-6] database.mysql.repository.TestDataImpl [221] - failed to save record: Cannot translate a null SQLException
+java.lang.IllegalArgumentException: Cannot translate a null SQLException
+	at org.springframework.util.Assert.notNull(Assert.java:112) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:65) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:359) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:216) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:95) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:68) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:278) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.run(TaskQueue.java:80) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+2018-04-18 11:04:09.233 [ERROR] [vert.x-eventloop-thread-0] com.zaxxer.hikari.util.PropertyBeanSetter [133] - Property minEvictableIdleTimeMillis does not exist on target class com.mysql.jdbc.jdbc2.optional.MysqlDataSource
+2018-04-18 11:20:25.215 [ERROR] [vert.x-worker-thread-12] database.mysql.repository.TestDataImpl [221] - failed to save record: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Communications link failure
+
+The last packet successfully received from the server was 6 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 6 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.
+org.springframework.dao.RecoverableDataAccessException: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Communications link failure
+
+The last packet successfully received from the server was 6 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 6 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.
+	at org.jooq_3.9.1.MYSQL.debug(Unknown Source) ~[?:?]
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:98) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:364) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:216) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:95) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:68) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:278) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.run(TaskQueue.java:80) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 6 milliseconds ago.  The last packet sent successfully to the server was 2 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_161]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_161]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_161]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_161]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:981) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3465) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ServerPreparedStatement.serverExecute(ServerPreparedStatement.java:1274) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ServerPreparedStatement.executeInternal(ServerPreparedStatement.java:780) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2957) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3375) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ServerPreparedStatement.serverExecute(ServerPreparedStatement.java:1274) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ServerPreparedStatement.executeInternal(ServerPreparedStatement.java:780) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+2018-04-18 11:20:26.056 [ERROR] [vert.x-worker-thread-13] database.mysql.repository.TestDataImpl [221] - failed to save record: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Communications link failure
+
+The last packet successfully received from the server was 27 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 27 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.
+org.springframework.dao.RecoverableDataAccessException: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Communications link failure
+
+The last packet successfully received from the server was 27 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 27 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.
+	at org.jooq_3.9.1.MYSQL.debug(Unknown Source) ~[?:?]
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:98) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:364) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:216) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:95) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:68) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:278) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.run(TaskQueue.java:80) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 27 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_161]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_161]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_161]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_161]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:981) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3465) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2957) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3375) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+2018-04-18 11:20:37.021 [ERROR] [vert.x-worker-thread-14] database.mysql.repository.TestDataImpl [221] - failed to save record: Cannot translate a null SQLException
+java.lang.IllegalArgumentException: Cannot translate a null SQLException
+	at org.springframework.util.Assert.notNull(Assert.java:112) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:65) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:359) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:216) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:95) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:68) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:278) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.run(TaskQueue.java:80) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+2018-04-18 14:31:09.090 [ERROR] [vert.x-worker-thread-4] database.mysql.repository.TestDataImpl [225] - failed to save record: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Communications link failure
+
+The last packet successfully received from the server was 15 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 15 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.
+org.springframework.dao.RecoverableDataAccessException: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Communications link failure
+
+The last packet successfully received from the server was 15 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 15 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.
+	at org.jooq_3.9.1.MYSQL.debug(Unknown Source) ~[?:?]
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:98) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:364) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:217) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:95) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:68) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:278) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.run(TaskQueue.java:80) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 15 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_161]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_161]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_161]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_161]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:981) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3465) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2957) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3375) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+2018-04-18 14:31:09.208 [ERROR] [vert.x-worker-thread-4] database.mysql.repository.TestDataImpl [225] - failed to save record: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Communications link failure
+
+The last packet successfully received from the server was 5 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 5 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.
+org.springframework.dao.RecoverableDataAccessException: jOOQ; SQL [insert into `test`.`testData` (`name`, `time`) values (?, ?)]; Communications link failure
+
+The last packet successfully received from the server was 5 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 5 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.
+	at org.jooq_3.9.1.MYSQL.debug(Unknown Source) ~[?:?]
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:98) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:364) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:217) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:95) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:68) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:278) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.run(TaskQueue.java:80) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 5 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_161]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_161]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_161]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_161]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:981) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3465) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2957) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3375) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861) ~[Demo-database-1.0.jar:?]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementProxy.execute(PreparedStatementProxy.java:44) ~[Demo-database-1.0.jar:?]
+	at com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy.execute(PreparedStatementJavassistProxy.java) ~[Demo-database-1.0.jar:?]
+	at org.jooq.tools.jdbc.DefaultPreparedStatement.execute(DefaultPreparedStatement.java:194) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:431) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDMLQuery.execute(AbstractDMLQuery.java:335) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:349) ~[Demo-database-1.0.jar:?]
+	... 9 more
+2018-04-18 14:31:19.996 [ERROR] [vert.x-worker-thread-5] database.mysql.repository.TestDataImpl [225] - failed to save record: Cannot translate a null SQLException
+java.lang.IllegalArgumentException: Cannot translate a null SQLException
+	at org.springframework.util.Assert.notNull(Assert.java:112) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:65) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:359) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:217) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:95) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:68) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:278) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.run(TaskQueue.java:80) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+2018-04-18 14:31:30.009 [ERROR] [vert.x-worker-thread-5] database.mysql.repository.TestDataImpl [225] - failed to save record: Cannot translate a null SQLException
+java.lang.IllegalArgumentException: Cannot translate a null SQLException
+	at org.springframework.util.Assert.notNull(Assert.java:112) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:65) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:359) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:217) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:95) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:68) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:278) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.run(TaskQueue.java:80) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+2018-04-18 14:31:40.020 [ERROR] [vert.x-worker-thread-5] database.mysql.repository.TestDataImpl [225] - failed to save record: Cannot translate a null SQLException
+java.lang.IllegalArgumentException: Cannot translate a null SQLException
+	at org.springframework.util.Assert.notNull(Assert.java:112) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:65) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:359) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:217) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:95) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:68) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:278) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.run(TaskQueue.java:80) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]
+2018-04-18 14:31:50.028 [ERROR] [vert.x-worker-thread-5] database.mysql.repository.TestDataImpl [225] - failed to save record: Cannot translate a null SQLException
+java.lang.IllegalArgumentException: Cannot translate a null SQLException
+	at org.springframework.util.Assert.notNull(Assert.java:112) ~[Demo-database-1.0.jar:?]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:65) ~[Demo-database-1.0.jar:?]
+	at database.mysql.context.ExceptionTranslator.exception(ExceptionTranslator.java:25) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.ExecuteListeners.exception(ExecuteListeners.java:245) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractQuery.execute(AbstractQuery.java:359) ~[Demo-database-1.0.jar:?]
+	at org.jooq.impl.AbstractDelegatingQuery.execute(AbstractDelegatingQuery.java:135) ~[Demo-database-1.0.jar:?]
+	at database.mysql.repository.BaseRepoImpl.save(BaseRepoImpl.java:217) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.saveToDb(ServiceImpl.java:95) ~[Demo-database-1.0.jar:?]
+	at app.ServiceImpl.lambda$null$0(ServiceImpl.java:68) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$1(ContextImpl.java:278) ~[Demo-database-1.0.jar:?]
+	at io.vertx.core.impl.TaskQueue.run(TaskQueue.java:80) ~[Demo-database-1.0.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_161]

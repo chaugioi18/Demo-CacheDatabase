@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Properties>
+        <Property name="log-path">
+            logs
+        </Property>
+        <Property name="backup-log-path">
+            logs/backup
+        </Property>
+    </Properties>
+    <Appenders>
+        <RollingFile name="test-db-error"
+                     fileName="${log-path}/test-db-error.log"
+                     filePattern="${backup-log-path}/test-db-error-%d{yyyy-MMM-dd}-%i.log.gz"
+                     immediateFlush="true" append="true">
+            <PatternLayout>
+                <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] [%t] %c{10} [%L] - %msg%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+                <SizeBasedTriggeringPolicy size="50 MB"/>
+            </Policies>
+        </RollingFile>
+        <RollingFile name="test-db-debug"
+                     fileName="${log-path}/test-db-debug.log"
+                     filePattern="${backup-log-path}/test-db-debug-%d{yyyy-MMM-dd}-%i.log.gz"
+                     immediateFlush="true" append="true">
+            <PatternLayout>
+                <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] [%t] %c{10} [%L] - %msg%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+                <SizeBasedTriggeringPolicy size="50 MB"/>
+            </Policies>
+        </RollingFile>
+        <RollingFile name="test-db-info"
+                     fileName="${log-path}/test-db-info.log"
+                     filePattern="${backup-log-path}/test-db-info-%d{yyyy-MMM-dd}-%i.log.gz"
+                     immediateFlush="true" append="true">
+            <PatternLayout>
+                <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] [%t] %c{10} [%L] - %msg%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+                <SizeBasedTriggeringPolicy size="50 MB"/>
+            </Policies>
+        </RollingFile>
+        <RollingFile name="test-db-trace"
+                     fileName="${log-path}/test-db-trace.log"
+                     filePattern="${backup-log-path}/test-db-trace-%d{yyyy-MMM-dd}-%i.log.gz"
+                     immediateFlush="true" append="true">
+            <PatternLayout>
+                <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] [%t] %c{10} [%L] - %msg%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+                <SizeBasedTriggeringPolicy size="50 M"/>
+            </Policies>
+        </RollingFile>
+
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%highlight{%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] [%t] %c{1} -%M %c{10} [%L] - %msg%n}{FATAL=red, ERROR=red, WARN=yellow bold, INFO=green, DEBUG=white bold, TRACE=gray}"/>
+        </Console>
+    </Appenders>
+
+    <Loggers>
+        <Logger name="com.zaxxer.hikari" level="error"/>
+        <Logger name="io.netty.handler.codec.http.websocketx" level="error"/>
+        <Root level="All">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="test-db-error" level="error"/>
+            <AppenderRef ref="test-db-info" level="info"/>
+            <AppenderRef ref="test-db-debug" level="debug"/>
+            <AppenderRef ref="test-db-trace" level="trace"/>
+        </Root>
+
+    </Loggers>
+
+</Configuration>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Demo-CacheDatabase.iml" filepath="$PROJECT_DIR$/.idea/modules/Demo-CacheDatabase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Demo-CacheDatabase_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Demo-CacheDatabase_main.iml" group="Demo-CacheDatabase" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Demo-CacheDatabase_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Demo-CacheDatabase_test.iml" group="Demo-CacheDatabase" />
+    </modules>
+  </component>
+</project>

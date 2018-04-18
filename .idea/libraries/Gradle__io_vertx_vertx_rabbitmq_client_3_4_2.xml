@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: io.vertx:vertx-rabbitmq-client:3.4.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.vertx/vertx-rabbitmq-client/3.4.2/9fde28075a90e06bd7c1fc9a88bf65fd5d1901a3/vertx-rabbitmq-client-3.4.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.vertx/vertx-rabbitmq-client/3.4.2/2b7f9a0681b1357264a5abdca728e4b4b7b82a77/vertx-rabbitmq-client-3.4.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

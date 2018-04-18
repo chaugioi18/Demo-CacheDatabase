@@ -1,0 +1,33 @@
+{
+  "readDbConfig": {
+    "dataSourceClassName": "com.mysql.jdbc.jdbc2.optional.MysqlDataSource",
+    "host": "localhost",
+    "port": 9910,
+    "maxPoolSize": 16,
+    "username": "root",
+    "password": "1@3Pikachu",
+    "database": "test"
+  },
+  "writeDbConfig": {
+    "dataSourceClassName": "com.mysql.jdbc.jdbc2.optional.MysqlDataSource",
+    "host": "localhost",
+    "port": 9911,
+    "maxPoolSize": 16,
+    "username": "root",
+    "password": "123pikachu",
+    "database": "test"
+  },
+  "redisConfig": {
+    "host": "192.168.18.55",
+    "port": 9509,
+    "password": "AbCd@1234",
+    "proxyConfig": {
+      "proxy": true,
+      "host": "0.0.0.0",
+      "port": 8888,
+      "password": "intelin.vn",
+      "proxyType": 2
+      // 1 == SOCK4; 2 == SOCKS5; default = HTTP
+    }
+  }
+}

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: io.vertx:vertx-redis-client:3.5.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.vertx/vertx-redis-client/3.5.0/22c6ea0d86673ef0003dc29d0e4f9701e139d8c/vertx-redis-client-3.5.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.vertx/vertx-redis-client/3.5.0/9086eb787e15d74ea48686695a6c3f325a19f3dc/vertx-redis-client-3.5.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
