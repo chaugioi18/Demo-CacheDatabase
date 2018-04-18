@@ -12,11 +12,15 @@ import io.vertx.core.AsyncResult;
 import io.vertx.core.Vertx;
 import io.vertx.core.http.HttpServer;
 import io.vertx.core.http.HttpServerOptions;
+import io.vertx.core.impl.VertxImpl;
 import io.vertx.ext.web.Router;
 import obj.ISqlConnection;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.ThreadPoolExecutor;
 
 public class ServiceImpl implements IService {
 
@@ -27,18 +31,24 @@ public class ServiceImpl implements IService {
     private ISqlConnection db2;
     private DbConnectionConfig config;
     private IRedisAdapter redisAdapter;
+    private Vertx vertx;
+    private ExecutorService executorService;
 
     @Inject
     ServiceImpl(ITestDataRepo testDataWriteRepo,
                 @Named("Read") ISqlConnection db1,
                 @Named("Write") ISqlConnection db2,
                 DbConnectionConfig config,
-                IRedisAdapter redisAdapter) {
+                IRedisAdapter redisAdapter,
+                Vertx vertx,
+                ExecutorService executorService) {
         this.testDataWriteRepo = testDataWriteRepo;
         this.db1 = db1;
         this.db2 = db2;
         this.config = config;
         this.redisAdapter = redisAdapter;
+        this.vertx = vertx;
+        this.executorService = executorService;
     }
 
     @Override
@@ -51,12 +61,14 @@ public class ServiceImpl implements IService {
 
     @Override
     public IService executeData() {
-        Vertx vertx = Vertx.vertx();
         HttpServer server = vertx.createHttpServer(new HttpServerOptions()
                 .setHost("localhost")
                 .setPort(9990));
         Router router = Router.router(vertx);
         server.requestHandler(router::accept);
+        LOGGER.info("Core pool size {} \n max {} \n largest {} \n pool size{}", ((ThreadPoolExecutor) executorService).getCorePoolSize(),
+                ((ThreadPoolExecutor) executorService).getMaximumPoolSize(), ((ThreadPoolExecutor) executorService).getLargestPoolSize(),
+                ((ThreadPoolExecutor) executorService).getPoolSize());
         router.post("/test").handler(event->{
             event.request().bodyHandler(buffer->{
                 vertx.executeBlocking(handle->{
@@ -85,7 +97,6 @@ public class ServiceImpl implements IService {
 
     @Override
     public IService getData() {
-
         return this;
     }
 
